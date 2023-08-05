@@ -1,0 +1,112 @@
+:root {
+  --content-width: 1440px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + var(--container-offset)*2);
+}
+
+@font-face {
+  font-family: Metal-Variable;
+  src: url('/fonts/Metal-Variable.ttf');
+}
+@font-face {
+  font-family: Manrope;
+  src: url('/fonts/Manrope-Light.ttf');
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  font-family: Metal-Variable, sans-serif;
+  background: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+p {
+  font-family: Manrope, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button, input {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  caret-color: #FFF;
+  background-color: transparent;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:active {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+
+button:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+}
+
+button:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: var(--container-width);
+  padding: 0 var(--container-offset);
+}
+
+section {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-wrapper {
+  position: relative;
+  padding-left: 20%;
+  z-index: 1;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 97px;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  color: #fff;
+
+  &_right { text-align: right; }
+  span { display: block; }
+}
+
+.section-indents {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
